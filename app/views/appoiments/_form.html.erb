@@ -1,0 +1,29 @@
+<%= form_for(@appoiment) do |f| %>
+  <% if @appoiment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@appoiment.errors.count, "error") %> prohibited this appoiment from being saved:</h2>
+
+      <ul>
+      <% @appoiment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :physician_id %><br>
+    <%= f.number_field :physician_id %>
+  </div>
+  <div class="field">
+    <%= f.label :patient_id %><br>
+    <%= f.number_field :patient_id %>
+  </div>
+  <div class="field">
+    <%= f.label :appoiment %><br>
+    <%= f.text_field :appoiment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

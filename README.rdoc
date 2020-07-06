@@ -1,0 +1,3 @@
+== README
+
+Exemplo de has_many through para o Raphael.
